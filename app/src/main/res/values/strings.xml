@@ -7,18 +7,27 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_profiles">Profiles</string>
+    <string name="menu_check_product">Check Product</string>
 
     <string name="save_button">Save</string>
     <string name="cancel_button">Cancel</string>
+    <string name="home_button">Home</string>
     <string name="profile_image">Image of profile</string>
 
     <string name="scan_product_button">Scan</string>
     <string name="search_product_button">Search</string>
 
     <string name="add_profile_name_hint">Name</string>
+
+    <string name="scan_product_now">Scan Product</string>
+
+    <string name="product_name_title">Product:</string>
+    <string name="alert_title">Alert:</string>
+    <string name="ingredients_title">Ingredients:</string>
+    <string name="allergens_detected_title_text">Allergens Detected:</string>
+    <string name="scan_new_button">Scan New Product</string>
+    <string name="search_new_button">Search New Product</string>
 
     <string name="add_prof_allergen">Add profile or allergen</string>
 </resources>

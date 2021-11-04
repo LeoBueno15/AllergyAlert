@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839371016649",
+    "project_id": "elegant-skein-328815",
+    "storage_bucket": "elegant-skein-328815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839371016649:android:473cfd843f68f8e91c4018",
+        "android_client_info": {
+          "package_name": "com.example.allergyalert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839371016649-3u9p0j2q9le7jusngsqr4vfou9l6q1f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdm7TbYbujCRdMS0h0sncfYdPACOdhaOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839371016649-3u9p0j2q9le7jusngsqr4vfou9l6q1f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

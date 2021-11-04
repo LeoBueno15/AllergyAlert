@@ -1,10 +1,10 @@
-package com.example.allergyalert.ui.slideshow
+package com.example.allergyalert.ui.profiles
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = ""

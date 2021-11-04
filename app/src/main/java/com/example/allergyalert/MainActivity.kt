@@ -1,5 +1,6 @@
 package com.example.allergyalert
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -11,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.allergyalert.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,11 +35,16 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_profiles, R.id.nav_check_product
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val animationBackground = findViewById<DrawerLayout>(R.id.drawer_layout).background as AnimationDrawable
+        animationBackground.setEnterFadeDuration(4000)
+        animationBackground.setExitFadeDuration(4000)
+        animationBackground.start()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -1,10 +1,10 @@
-package com.example.allergyalert.ui.home
+package com.example.allergyalert.ui.checkproduct
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class CheckProductViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = ""

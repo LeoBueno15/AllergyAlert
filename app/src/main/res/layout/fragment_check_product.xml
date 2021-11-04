@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gallery.GalleryFragment">
+    tools:context=".ui.checkproduct.CheckProductFragment">
 
     <TextView
         android:id="@+id/text_gallery"
@@ -23,8 +23,9 @@
         android:id="@+id/scan_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_margin="10dp"
         android:text="@string/scan_product_button"
+        app:layout_constraintBottom_toTopOf="@+id/text_gallery"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp" />
 
@@ -32,7 +33,9 @@
         android:id="@+id/search_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="@string/search_product_button"
-        app:layout_constraintTop_toBottomOf="@+id/scan_product" />
+        app:layout_constraintTop_toBottomOf="@+id/scan_product"
+        tools:layout_editor_absoluteX="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

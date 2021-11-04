@@ -1,4 +1,4 @@
-package com.example.allergyalert.ui.home
+package com.example.allergyalert.ui.profiles
 
 import android.content.Intent
 import android.os.Bundle

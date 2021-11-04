@@ -21,4 +21,9 @@
     <string name="add_profile_name_hint">Name</string>
 
     <string name="add_prof_allergen">Add profile or allergen</string>
+    <string-array name="days">
+        <item>Peanuts</item>
+        <item>Seafood</item>
+    </string-array>
+
 </resources>

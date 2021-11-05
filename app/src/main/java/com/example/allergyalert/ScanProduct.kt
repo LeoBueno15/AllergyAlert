@@ -50,7 +50,7 @@ class ScanProduct : AppCompatActivity() {
                     this.startActivity(intent)
                 }
             } else {
-                super.onActivityResult(requestCode, resultCode, data)
+                super. onActivityResult(requestCode, resultCode, data)
             }
         }
     }

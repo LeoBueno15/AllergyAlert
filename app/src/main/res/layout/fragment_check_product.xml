@@ -19,6 +19,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/check_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:text="Check Product"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/check_product_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="To check for allergens in a product, select SCAN mode to scan the product's barcode, or select SEARCH mode to lookup a product. Once a product has been read, its information, including allergens, will be displayed."
+        app:layout_constraintTop_toBottomOf="@+id/check_product_title"/>
+
     <Button
         android:id="@+id/scan_product"
         android:layout_width="match_parent"
@@ -27,7 +47,8 @@
         android:text="@string/scan_product_button"
         app:layout_constraintBottom_toTopOf="@+id/text_gallery"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintVertical_bias="0.263"
+        tools:layout_editor_absoluteX="-8dp" />
 
     <Button
         android:id="@+id/search_product"

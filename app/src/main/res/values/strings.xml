@@ -10,6 +10,8 @@
     <string name="menu_profiles">Profiles</string>
     <string name="menu_check_product">Check Product</string>
 
+    <string name="profile_view_header_text">Profiles</string>
+
     <string name="save_button">Save</string>
     <string name="cancel_button">Cancel</string>
     <string name="home_button">Home</string>
@@ -29,10 +31,17 @@
     <string name="scan_new_button">Scan New Product</string>
     <string name="search_new_button">Search New Product</string>
 
+    <string name="row_name_text">Name</string>
+
     <string name="add_prof_allergen">Add profile or allergen</string>
     <string-array name="days">
         <item>Peanuts</item>
         <item>Seafood</item>
     </string-array>
 
+    <string name="scan_product_title">Scan Product</string>
+    <string name="scan_product_text">Scan the barcode of a food product to receive
+    information on contained allergens. To begin, click on SCAN PRODUCT to use
+        camera to scan. Otherwise, click on HOME to exit Scan Product Mode.
+    </string>
 </resources>

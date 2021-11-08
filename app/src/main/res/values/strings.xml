@@ -40,6 +40,15 @@
         <item>Seafood</item>
     </string-array>
 
+    <string-array name="test_profile">
+        <item>James</item>
+        <item>11/12/2000</item>
+        <item>170</item>
+        <item>78</item>
+        <item>Carry an epipen with me always.</item>
+        <item>Peanuts, Seafood</item>
+    </string-array>
+
     <string name="scan_product_title">Scan Product</string>
     <string name="scan_product_text">Scan the barcode of a food product to receive
     information on contained allergens. To begin, click on SCAN PRODUCT to use

@@ -56,6 +56,14 @@ class HomeFragment : Fragment() {
         val arrayAdapter: ArrayAdapter<String>? = context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, profileArray) }
         profileList.adapter = arrayAdapter
 
+        profileList.setOnItemClickListener { parent, view, position, id ->
+            var itemName = arrayAdapter?.getItem(position) // The item that was clicked
+            val intent = Intent(activity, ProfilesView::class.java)
+            println(itemName)
+            intent.putExtra("name", itemName);
+            activity?.startActivity(intent)
+        }
+
         addProfileButton = binding.addProfileButton
         addProfileButton.setOnClickListener {
             val intent = Intent(activity, AddProfile::class.java)

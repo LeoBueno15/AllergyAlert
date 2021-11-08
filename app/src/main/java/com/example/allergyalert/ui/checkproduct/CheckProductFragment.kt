@@ -1,20 +1,16 @@
 package com.example.allergyalert.ui.checkproduct
 
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.allergyalert.R
-import com.example.allergyalert.ScanProduct
-import com.example.allergyalert.SearchProduct
 import com.example.allergyalert.databinding.FragmentCheckProductBinding
 
 class CheckProductFragment : Fragment() {

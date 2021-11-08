@@ -10,4 +10,6 @@
     <color name="blue">#FF4CA3DD</color>
     <color name="coal">#FF333333</color>
     <color name="light_coal">#FF555555</color>
+    <color name="teal">#008080</color>
+    <color name="orange">#FFA500</color>
 </resources>

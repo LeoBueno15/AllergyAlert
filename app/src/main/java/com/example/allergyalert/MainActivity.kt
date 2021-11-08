@@ -1,7 +1,9 @@
 package com.example.allergyalert
 
+import android.content.Context
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
+import android.renderscript.ScriptGroup
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -13,7 +15,12 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.app.ActivityCompat
 import com.example.allergyalert.databinding.ActivityMainBinding
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,6 +52,34 @@ class MainActivity : AppCompatActivity() {
         animationBackground.setEnterFadeDuration(4000)
         animationBackground.setExitFadeDuration(4000)
         animationBackground.start()
+
+
+//        val fileName = "tech.txt"
+//        val fileObject = File(fileName)
+//
+//        println("file path " + fileObject.canonicalPath)
+//        // create a new file
+//        fileObject.writeText("This is some text for file writing operations")
+
+
+        val inputMan: InputStream = this.resources.openRawResource(R.raw.manufacturers_text)
+        val lineListMan = mutableListOf<String>()
+        inputMan.bufferedReader().forEachLine { lineListMan.add(it) }
+
+        val inputProd: InputStream = this.resources.openRawResource(R.raw.products_text)
+        val lineListProd = mutableListOf<String>()
+        inputProd.bufferedReader().forEachLine { lineListProd.add(it) }
+
+        val inputIngred: InputStream = this.resources.openRawResource(R.raw.ingredients_text)
+        val lineListIngred = mutableListOf<String>()
+        inputIngred.bufferedReader().forEachLine { lineListIngred.add(it) }
+
+        println(lineListMan.size)
+        println(lineListProd.size)
+        println(lineListIngred.size)
+        for (i in 0..10000) {
+            println("$i. " + lineListMan[i] + " | " + lineListProd[i] + " | " + lineListIngred[i] + "\n")
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

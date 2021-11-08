@@ -66,14 +66,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="250dp"
+                android:background="@null"
                 android:fontFamily="roboto"
+                android:hint="Add Name"
                 android:inputType="text"
-                android:text="Add Name"
                 android:textAlignment="center"
                 android:textColor="@color/blue"
-                android:textSize="14dp"
-                android:background="@null"
-                />
+                android:textSize="14dp" />
         </RelativeLayout>
 
         <LinearLayout
@@ -100,7 +99,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="roboto"
                 android:inputType="text"
-                android:text="Date of Birth: MM/DD/YYYY"
+                android:hint="Date of Birth: MM/DD/YYYY"
                 android:textColor="@color/blue"
                 android:textSize="14dp"
                 android:background="@null"
@@ -133,7 +132,7 @@
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
                     android:inputType="text"
-                    android:text="Height in cm"
+                    android:hint="Height in cm"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
                     android:background="@null"
@@ -146,7 +145,7 @@
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
                     android:inputType="text"
-                    android:text="Weight in kg"
+                    android:hint="Weight in kg"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
                     android:background="@null"
@@ -177,7 +176,7 @@
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
                     android:inputType="text"
-                    android:text="Enter relevant notes e.g. medical history"
+                    android:hint="Enter relevant notes e.g. medical history"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
                     android:background="@null"

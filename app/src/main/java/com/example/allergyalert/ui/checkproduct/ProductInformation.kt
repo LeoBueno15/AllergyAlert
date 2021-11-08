@@ -1,10 +1,12 @@
-package com.example.allergyalert
+package com.example.allergyalert.ui.checkproduct
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import com.example.allergyalert.MainActivity
+import com.example.allergyalert.R
 
 class ProductInformation : AppCompatActivity() {
 

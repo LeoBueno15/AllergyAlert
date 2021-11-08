@@ -3,28 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.allergyalert">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AllergyAlert">
+        android:theme="@style/Theme.AllergyAlert"
+        android:requestLegacyExternalStorage="true">
         <activity
-            android:name=".ProductInformation"
+            android:name=".ui.checkproduct.ProductInformation"
             android:exported="true" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation" />
         <activity
-            android:name=".ScanProduct"
+            android:name=".ui.checkproduct.ScanProduct"
             android:exported="true" />
         <activity
-            android:name=".SearchProduct"
+            android:name=".ui.checkproduct.SearchProduct"
             android:exported="true" />
         <activity
-            android:name=".AddProfile"
+            android:name=".ui.profiles.AddProfile"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

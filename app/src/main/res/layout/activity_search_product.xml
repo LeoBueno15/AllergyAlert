@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/search_product_layout"
-    tools:context=".SearchProduct">
+    tools:context=".ui.checkproduct.SearchProduct">
 
     <SearchView
         android:id="@+id/product_search_bar"

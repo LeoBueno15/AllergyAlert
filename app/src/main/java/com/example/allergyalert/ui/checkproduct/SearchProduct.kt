@@ -1,12 +1,12 @@
-package com.example.allergyalert
+package com.example.allergyalert.ui.checkproduct
 
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.*
-import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.allergyalert.MainActivity
+import com.example.allergyalert.R
 
 class SearchProduct : AppCompatActivity() {
 

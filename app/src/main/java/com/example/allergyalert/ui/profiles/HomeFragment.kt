@@ -9,7 +9,6 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.allergyalert.AddProfile
 import com.example.allergyalert.R
 import com.example.allergyalert.databinding.FragmentHomeBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -48,7 +47,12 @@ class HomeFragment : Fragment() {
 
         profileList = binding.profilesListView
         val profileArray: ArrayList<String> = ArrayList()
-        profileArray.add("Sample Profile")
+        profileArray.add("Profile 1")
+        profileArray.add("Profile 2")
+        profileArray.add("Profile 3")
+        profileArray.add("Profile 4")
+        profileArray.add("Profile 5")
+
         val arrayAdapter: ArrayAdapter<String>? = context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, profileArray) }
         profileList.adapter = arrayAdapter
 

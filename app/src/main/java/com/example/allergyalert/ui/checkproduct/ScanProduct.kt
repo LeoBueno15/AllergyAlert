@@ -1,15 +1,14 @@
-package com.example.allergyalert
+package com.example.allergyalert.ui.checkproduct
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.example.allergyalert.ui.checkproduct.CheckProductFragment
+import com.example.allergyalert.MainActivity
+import com.example.allergyalert.R
 import com.google.zxing.integration.android.IntentIntegrator
 
 class ScanProduct : AppCompatActivity() {
@@ -50,7 +49,7 @@ class ScanProduct : AppCompatActivity() {
                     this.startActivity(intent)
                 }
             } else {
-                super.onActivityResult(requestCode, resultCode, data)
+                super. onActivityResult(requestCode, resultCode, data)
             }
         }
     }

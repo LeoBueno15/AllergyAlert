@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         println(lineListMan.size)
         println(lineListProd.size)
         println(lineListIngred.size)
-        for (i in 0..10000) {
+        for (i in 0..10000 - 1) {
             println("$i. " + lineListMan[i] + " | " + lineListProd[i] + " | " + lineListIngred[i] + "\n")
         }
     }

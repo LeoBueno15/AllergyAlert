@@ -209,7 +209,7 @@ SPECIAL K
 Lindt & Sprungli
 Hidden Valley
 Vigo Importing Company
-MOM Brands
+MOM Brandsï¿½ï¿½
 American Roland Food Corp.
 Kenover Marketing Corp.
 Hanover Foods Corporation
@@ -836,7 +836,7 @@ Campbell Soup Company
 Amy & Brian
 COCA-COLA COMPANY
 R.W. Knudsen
-Nestl Waters North America Inc.
+Nestlï¿½ï¿½ Waters North America Inc.
 Perrier
 The Hain Celestial Group, Inc.
 Bookbinder's
@@ -1120,7 +1120,7 @@ Pepsico
 POP'D KERNS
 The Coca-Cola Company
 Jelly Belly Candy
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 Gatorade
 Glory Foods
 Brazos River Provisions
@@ -1480,7 +1480,7 @@ Zatarain's
 Zatarain's
 Martha White Foods
 Fancy Feast
-Nestl Purina PetCare Company
+Nestlï¿½ï¿½ Purina PetCare Company
 Fancy Feast
 BEECH NUT
 MANISCHEWITZ
@@ -1488,7 +1488,7 @@ Quaker
 McCormick & Co., Inc.
 Hershey's
 Fancy Feast
-Nestl Purina PetCare Company
+Nestlï¿½ï¿½ Purina PetCare Company
 Kraft Foods Beverages
 Starbucks
 THE HERSHEY CO
@@ -1503,7 +1503,7 @@ Ziyad
 Dr Pepper/Seven Up, Inc
 Mezzetta
 JM SMUCKER
-Nestl Purina PetCare Company
+Nestlï¿½ï¿½ Purina PetCare Company
 HODGSON MILL, INC.
 Nestle
 Frankford candy
@@ -1643,7 +1643,7 @@ St Dalfour
 Allens
 Faribault Foods
 Continental Mills Inc
-Nestl Purina PetCare Company
+Nestlï¿½ï¿½ Purina PetCare Company
 KRINOS
 Purina Friskies
 Nestle
@@ -1671,7 +1671,7 @@ Panos Brands LLC
 Signature Brands, LLC.
 Coca-Cola
 Gerber
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 Quaker Oats
 F.M. BROWN'S
 HERSHEY CHOCOLATE, USA
@@ -1782,7 +1782,7 @@ Domino Foods, Inc.
 Dean Jacob's
 Fancy Feast
 Nestle
-Nestl Purina PetCare Company
+Nestlï¿½ï¿½ Purina PetCare Company
 Smucker's
 Smucker's
 J.M. Smucker Company
@@ -1968,7 +1968,7 @@ Natco
 
 
 Byler's Relish House
-Nestl Waters North America Inc.
+Nestlï¿½ï¿½ Waters North America Inc.
 Ready Pac
 Coca-Cola USA
 Just Born, Inc.
@@ -2175,7 +2175,7 @@ Flahavans
 Sclafani
 Fluff
 Keebler
-Morton
+Mortonï¿½ï¿½
 All
 Healthy Snacks
 Republic of Tea
@@ -2480,7 +2480,7 @@ Star
 
 
 
-Ibo "T...
+Ibo "Tï¿½ï¿½...
 New touch
 Oh My
 Nova Mex
@@ -3187,7 +3187,7 @@ Bar
 ENER-G FOODS
 Eiffel Bon Bons
 Victorio
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 PEACE TEA BEVERAGE COMPANY
 THE LOVELY CANDY COMPANY LLC
 Mondelez Global LLC
@@ -3477,7 +3477,7 @@ General Mills
 Martha White Foods
 Voortman Cookies
 Pinnacle Foods Group LLC
-Food To Live
+Food To Live ï¿½ï¿½
 SNYDER'S-LANCE, INC.
 Voortman Cookies
 Sunkist Growers, Inc., USA under license by Dr Pepper/Seven Up, Inc
@@ -3899,7 +3899,7 @@ JFC International Inc.
 Rodelle
 newgrains.com
 Pacific Natural Foods
-Dr. John's Candies
+Dr. John'sï¿½ï¿½ Candies
 Terrasoul Superfoods
 DeLallo
 Kinnikinnick
@@ -4289,7 +4289,7 @@ Organic Coffee Co.
 ConAgra
 The J.M. Smucker Company
 Cat Coras Kitchen
-Nestl HealthCare Nutrition, Inc.
+Nestlï¿½ï¿½ HealthCare Nutrition, Inc.
 Kadoya
 Kellogg Company
 Paskesz
@@ -4415,7 +4415,7 @@ Kellogg Company
 Crunch Master
 Snyder's of Hanover
 GOYA FOODS INC
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 Smucker Natural Foods, Inc.
 Colcafe
 M&M's
@@ -4490,7 +4490,7 @@ Wm. Wrigley Jr. Company
 Melitta
 ConAgra Foods Inc.
 Favorit
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 Dot Foods Inc. - Disc.
 Hoosier Hill Farm LLC
 AmazonUs/QTGAB
@@ -4878,7 +4878,7 @@ Sobe
 Hartley
 Munchies
 Live Strong Live Long
-Nestl
+Nestlï¿½ï¿½
 Marmite
 Live Strong Live Long
 Rockstar
@@ -5471,7 +5471,7 @@ General Mills Sales, Inc.
 Mondelez Global LLC
 LifeSavers
 Snapple Beverage Corp
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 Mondelez Global
 Schar
 Tate's Bake Shop
@@ -5524,7 +5524,7 @@ Hillshire Brands
 Gorton's Seafood
 The Dannon Company, Inc.
 Pure Via
-Nestl Waters North America, Inc.
+Nestlï¿½ï¿½ Waters North America, Inc.
 Coca-Cola USA
 Unknown
 SABRA DIPPING COMPANY LLC
@@ -8108,7 +8108,7 @@ Brontedolci
 Rimmon
 Sesame Snaps
 Holy Lama Naturals
-Ramn Pea
+Ramï¿½ï¿½n Peï¿½ï¿½a
 De Cecco
 9bar
 El Avion
@@ -8246,7 +8246,7 @@ Arche Naturkost
 Munchies
 Ol'Vita
 Chefs Larder
-Khne
+Kï¿½ï¿½hne
 Niederegger
 Sandy Leaf Farm
 Mission
@@ -8329,7 +8329,7 @@ Heinz
 Azais Polito
 Seven Oceans
 Chefs Larder
-Ramn Pea
+Ramï¿½ï¿½n Peï¿½ï¿½a
 Walker's
 Holy Lama Naturals
 John
@@ -8391,7 +8391,7 @@ Intergourmandise
 Tracker
 Hidden Valley
 Xongdur
-ROLD GOLD
+ROLD GOLDï¿½ï¿½
 Napolina
 Mission
 UNCLE
@@ -8564,7 +8564,7 @@ Just for Cheese
 Great British Sauce
 Ella's Kitchen
 Rapunzel
-Ramn Pea
+Ramï¿½ï¿½n Peï¿½ï¿½a
 Midzu
 Conservas De Cambados
 Pit&Pit
@@ -8598,7 +8598,7 @@ Chefs Larder
 Hidden Valley
 Heinz
 Special K
-Khne
+Kï¿½ï¿½hne
 Marschland Naturkost
 Princes
 San Pietro a Pettine
@@ -8614,7 +8614,7 @@ Cartmel Sticky Toffee Pudding
 Wish Bone
 Chefs Larder
 Barts
-Ramn Pea
+Ramï¿½ï¿½n Peï¿½ï¿½a
 Hidden Valley
 JM Posner Simply Entertaining
 Hidden Valley
@@ -8638,7 +8638,7 @@ Chefs Larder
 Xongdur
 Pulpo en Tabla
 Belvita
-Khne
+Kï¿½ï¿½hne
 Punto Verde
 D'Aucy
 Lao Gan Ma
@@ -8649,7 +8649,7 @@ Princes
 Kellogg's
 S&B
 Xongdur
-Nestl
+Nestlï¿½ï¿½
 Sunwave
 Bogar
 
@@ -8724,7 +8724,7 @@ FUSION GOURMET INC
 Kraft
 Tortuga
 Bragg's Liquid Aminos
-Nestl healtcare Nutrition, Inc.
+Nestlï¿½ï¿½ healtcare Nutrition, Inc.
 Kraft
 Leonard Mountain
 Frontier
@@ -8841,7 +8841,7 @@ Earth's Best
 Campbell's
 Grand Brands dba True Citrus
 Hershey's Kisses
-Nestl USA, Inc.
+Nestlï¿½ï¿½ USA, Inc.
 Schar
 Stacy's
 Equal Exchange
@@ -8855,7 +8855,7 @@ Otafuku
 Pit&Pit
 Hot spanish paprika
 Walker's
-Cteaux Nantais
+Cï¿½ï¿½teaux Nantais
 Kellogg's
 Cheez It
 Mission
@@ -8883,7 +8883,7 @@ Princes
 Walkers Crisps
 Cocoa Crispies
 
-Nestl
+Nestlï¿½ï¿½
 Mugshot
 La Chinata
 Fine Food Specialist
@@ -8937,7 +8937,7 @@ Ktc
 Ktc
 Fine Food Specialist
 Probios
-Khne
+Kï¿½ï¿½hne
 Batchelors
 Live Strong Live Long
 Barilla
@@ -9034,7 +9034,7 @@ Ceres Juices
 Bumble Bee
 Zatarain's
 Ginger People
-Maison Arostguy
+Maison Arostï¿½ï¿½guy
 True Lemon
 Hershey's
 Motts
@@ -9314,7 +9314,7 @@ Baetea
 Roland
 QTG Products
 Smooze
-The Perfect Pure of Napa Valley
+The Perfect Purï¿½ï¿½e of Napa Valley
 Bellino
 Gefen foods
 Once Again Nut Butter
@@ -9355,7 +9355,7 @@ Kraft Foods North America, Inc
 Colavita
 Peter Rabbit Organics
 J & J Snack Foods Corp.
-Promotion In Motion
+Promotion In Motionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 Mott's LLP
 desert-pepper-trading-co
 BHUJA
@@ -9384,7 +9384,7 @@ FODY Food Co.
 St. Dalfour
 Hodgson Mill
 Maruchan, Inc.
-Nestl Purina PetCare Company
+Nestlï¿½ï¿½ Purina PetCare Company
 Herr's
 Tillamook
 Jays Potato Chips
@@ -9655,7 +9655,7 @@ Eden Foods
 Roland
 Leonard Mountain
 Terrasoul Superfoods
-Nestl HealthCare Nutrition, Inc.
+Nestlï¿½ï¿½ HealthCare Nutrition, Inc.
 Kikkoman
 Wel Pac
 Food To Live Â®
@@ -9718,7 +9718,7 @@ Natural Nectar
 Fatworks
 Go Raw
 La Tourangelle
-EDEN
+EDENï¿½ï¿½
 Spicy World
 Buffalo Bills Beef Jerky  and Premium Snacks
 Dial Corp./Home Care

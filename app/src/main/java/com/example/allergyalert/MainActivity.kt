@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.example.allergyalert.databinding.ActivityMainBinding
+import com.google.firebase.database.FirebaseDatabase
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -53,33 +54,23 @@ class MainActivity : AppCompatActivity() {
         animationBackground.setExitFadeDuration(4000)
         animationBackground.start()
 
-
-//        val fileName = "tech.txt"
-//        val fileObject = File(fileName)
+//        val inputProd: InputStream = this.resources.openRawResource(R.raw.products_text)
+//        val lineListProd = mutableListOf<String>()
+//        inputProd.bufferedReader().forEachLine { lineListProd.add(it) }
 //
-//        println("file path " + fileObject.canonicalPath)
-//        // create a new file
-//        fileObject.writeText("This is some text for file writing operations")
-
-
-        val inputMan: InputStream = this.resources.openRawResource(R.raw.manufacturers_text)
-        val lineListMan = mutableListOf<String>()
-        inputMan.bufferedReader().forEachLine { lineListMan.add(it) }
-
-        val inputProd: InputStream = this.resources.openRawResource(R.raw.products_text)
-        val lineListProd = mutableListOf<String>()
-        inputProd.bufferedReader().forEachLine { lineListProd.add(it) }
-
-        val inputIngred: InputStream = this.resources.openRawResource(R.raw.ingredients_text)
-        val lineListIngred = mutableListOf<String>()
-        inputIngred.bufferedReader().forEachLine { lineListIngred.add(it) }
-
-        println(lineListMan.size)
-        println(lineListProd.size)
-        println(lineListIngred.size)
-        for (i in 0..10000 - 1) {
-            println("$i. " + lineListMan[i] + " | " + lineListProd[i] + " | " + lineListIngred[i] + "\n")
-        }
+//        val inputIngred: InputStream = this.resources.openRawResource(R.raw.ingredients_text)
+//        val lineListIngred = mutableListOf<String>()
+//        inputIngred.bufferedReader().forEachLine { lineListIngred.add(it) }
+//
+//        val ref = FirebaseDatabase.getInstance().getReference("products")
+//
+//        for (i in 0 until 10000) {
+//            val prodName = lineListProd[i].toString().trim()
+//            val prodIngredients = lineListIngred[i].toString().trim()
+//            val prodId = ref.push().key
+//            val product = Product(prodId!!, prodName, prodIngredients)
+//            ref.child(prodId).setValue(product)
+//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

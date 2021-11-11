@@ -45,4 +45,6 @@
     information on contained allergens. To begin, click on SCAN PRODUCT to use
         camera to scan. Otherwise, click on HOME to exit Scan Product Mode.
     </string>
+    
+    <string name="search_product_title">Search Product</string>
 </resources>

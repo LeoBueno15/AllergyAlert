@@ -3,66 +3,87 @@ package com.example.allergyalert.ui.checkproduct
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import android.widget.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.allergyalert.MainActivity
+import com.example.allergyalert.Product
 import com.example.allergyalert.R
+import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 
 class SearchProduct : AppCompatActivity() {
 
-    lateinit var searchProduct: SearchView
-    lateinit var searchOutput: ListView
-    lateinit var homeButton: Button
+    lateinit var searchProductBar: EditText
+    lateinit var searchProductButton: ImageButton
+    lateinit var productView: RecyclerView
+    lateinit var listQuery: DatabaseReference
+    lateinit var options: FirebaseRecyclerOptions<Product>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_product)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        listQuery = FirebaseDatabase.getInstance()
+            .reference
+            .child("")
+            .child("products")
 
-        searchProduct = findViewById(R.id.product_search_bar)
-        searchOutput = findViewById(R.id.search_output)
-        homeButton = findViewById(R.id.home_button)
+        searchProductBar = findViewById(R.id.search_product_bar)
+        searchProductButton = findViewById(R.id.search_product_button)
+        productView = findViewById(R.id.products_search_view)
+        productView.setHasFixedSize(true)
+        productView.layoutManager = LinearLayoutManager(this)
 
-        val sampleOutput = arrayOf("item1", "item2", "item3", "item4", "item5")
-        val adapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, sampleOutput)
-
-        searchOutput.adapter = adapter
-
-        searchProduct.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                searchProduct.clearFocus()
-                if (sampleOutput.contains(query)) {
-                    adapter.filter.filter(query)
-                }
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                adapter.filter.filter(newText)
-                return false
-            }
-        })
-
-        searchOutput.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            val selectedItemText = parent.getItemAtPosition(position)
-            val intent = Intent(this, ProductInformation::class.java)
-            this.startActivity(intent.putExtra("selected_product", selectedItemText.toString()))
+        searchProductButton.setOnClickListener {
+            firebaseProductSearch()
         }
 
-        homeButton.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            this.startActivity(intent)
+        options = FirebaseRecyclerOptions.Builder<Product>()
+            .setQuery(listQuery, Product::class.java)
+            .setLifecycleOwner(this)
+            .build()
+
+        val firebaseAdapter = object : FirebaseRecyclerAdapter<Product, ProductViewHolder>(options) {
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
+                return ProductViewHolder(LayoutInflater.from(parent.context)
+                    .inflate(R.layout.product_list_layout, parent, false))
+            }
+
+            override fun onBindViewHolder(viewHolder: ProductViewHolder, position: Int, model: Product) {
+                viewHolder.binding(model)
+            }
         }
+
+        productView.adapter = firebaseAdapter
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-                return true
+    private fun firebaseProductSearch() {
+        val firebaseAdapter = object : FirebaseRecyclerAdapter<Product, ProductViewHolder>(options) {
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
+                return ProductViewHolder(LayoutInflater.from(parent.context)
+                    .inflate(R.layout.product_list_layout, parent, false))
+            }
+
+            override fun onBindViewHolder(viewHolder: ProductViewHolder, position: Int, model: Product) {
+                viewHolder.binding(model)
             }
         }
-        return super.onContextItemSelected(item)
+        productView.adapter = firebaseAdapter
+    }
+
+    class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        fun binding(product: Product) {
+            val text = itemView.findViewById<TextView>(R.id.product_list_view_text)
+            text.text = product.productName
+        }
     }
 }

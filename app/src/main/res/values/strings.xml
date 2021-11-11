@@ -35,7 +35,7 @@
     <string name="row_name_text">Name</string>
 
     <string name="add_prof_allergen">Add profile or allergen</string>
-    <string-array name="days">
+    <string-array name="allergens_strings_xml">
         <item>Peanuts</item>
         <item>Seafood</item>
     </string-array>

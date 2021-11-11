@@ -19,7 +19,7 @@ class AddProfile : AppCompatActivity() {
         setContentView(R.layout.activity_add_profile)
 
         val autotextView = findViewById<AutoCompleteTextView>(R.id.allergy_entry)
-        val languages = resources.getStringArray(R.array.days)
+        val languages = resources.getStringArray(R.array.allergens_strings_xml) //array with allergens
         val adapter = ArrayAdapter(this,
             android.R.layout.simple_list_item_1, languages)
         autotextView.setAdapter(adapter)

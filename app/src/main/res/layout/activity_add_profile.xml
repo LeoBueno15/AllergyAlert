@@ -200,20 +200,35 @@
                     >
                 </ImageView>
 
-            <Spinner
-                android:id="@+id/allergensSpinner"
-                style="@style/FontTheme"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/blue"
-                android:entries="@array/days"
-                android:focusable="false">
+                <AutoCompleteTextView
+                    android:id="@+id/allergy_entry"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:hint="Add allergens"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAlignment="textStart"
+                    android:fontFamily="roboto"
+                    android:inputType="text"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:background="@null"
+                    >
+                </AutoCompleteTextView>
 
-            </Spinner>
+                <Button
+                    android:id="@+id/add_allergy"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/blue"
+                    android:src="@drawable/food"
+                    android:text="add"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    />
 
-        </LinearLayout>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"

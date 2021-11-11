@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllergyAlert"
         android:requestLegacyExternalStorage="true">
+
         <activity
             android:name=".ui.checkproduct.ProductInformation"
             android:exported="true" />
@@ -31,6 +32,9 @@
             android:exported="true" />
         <activity
             android:name=".ui.profiles.AddProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ui.profiles.ProfilesView"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -73,7 +73,6 @@ class HomeFragment : Fragment() {
             }
         }
 
-
         profileList = binding.profilesListView
 //        val profileArray: ArrayList<String> = ArrayList()
 //        profileArray.add("Profile 1")
@@ -112,5 +111,10 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         firebaseAdapter.startListening()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        firebaseAdapter.stopListening()
     }
 }

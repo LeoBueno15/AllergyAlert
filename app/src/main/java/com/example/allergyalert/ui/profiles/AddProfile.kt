@@ -1,8 +1,10 @@
 package com.example.allergyalert.ui.profiles
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.example.allergyalert.MainActivity
 import com.example.allergyalert.Profile
 import com.example.allergyalert.R
 import com.google.firebase.database.DatabaseReference
@@ -39,22 +41,20 @@ class AddProfile : AppCompatActivity() {
 
         if (intent.getStringArrayExtra("profile data") != null){
             hasProfileData = true
-            println("profile data available")
             profile_data = intent.getStringArrayExtra("profile data")!!
 
             for (i in 0..5) {
                 if (i == 0) {
-                    println("name is " + profile_data[i].toString())
                     profileName.setText(profile_data[i].toString())
                 }
                 else if (i == 1){
                     profileDOB.setText(profile_data[i].toString())
                 }
                 else if (i == 2){
-                    profileWeight.setText(profile_data[i].toString())
+                    profileHeight.setText(profile_data[i].toString())
                 }
                 else if (i == 3){
-                    profileHeight.setText(profile_data[i].toString())
+                    profileWeight.setText(profile_data[i].toString())
                 }
                 else if (i == 4){
                     profileNotes.setText(profile_data[i].toString())
@@ -64,15 +64,12 @@ class AddProfile : AppCompatActivity() {
                 }
             }
         } else {
-            println("no data")
             hasProfileData = false
         }
         saveButton = findViewById(R.id.save_profile)
         cancelButton = findViewById(R.id.cancel_profile)
 
         saveButton.setOnClickListener {
-            println("save button clicked")
-            finish()
             if (hasProfileData) {
                 val profileId = profile_data.last()
                 val profileIdRef = ref.child(profileId)
@@ -83,10 +80,7 @@ class AddProfile : AppCompatActivity() {
                 profileIdRef.child("notes").setValue(profileNotes.text.toString())
                 profileIdRef.child("allergens").setValue(profileAllergens.text.toString())
             } else {
-                println("created profile")
                 val profileKey = ref.push().key
-                println("profile height ${profileHeight.text.toString()}")
-                println("profile weight ${profileWeight.text.toString()}")
                 val profile = Profile(
                     profileKey!!,
                     profileName.text.toString(),
@@ -99,6 +93,8 @@ class AddProfile : AppCompatActivity() {
                 )
                 ref.child(profileKey).setValue(profile)
             }
+            val intent = Intent(this, MainActivity::class.java)
+            this.startActivity(intent)
             finish()
         }
 

@@ -66,8 +66,8 @@ class ProductInformation : AppCompatActivity() {
                                 if (!alertList.contains(profileName)) {
                                     alertList.add(profileName)
                                 }
-                                if (!allergensDetectedList.contains(allergen)) {
-                                    allergensDetectedList.add(allergen)
+                                if (!allergensDetectedList.contains(allergen.lowercase(Locale.getDefault()))) {
+                                    allergensDetectedList.add(allergen.lowercase(Locale.getDefault()))
                                 }
                             }
                         }

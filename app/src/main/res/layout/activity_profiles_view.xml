@@ -61,6 +61,7 @@
 
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/name_entry"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -68,8 +69,8 @@
                     android:layout_marginTop="250dp"
                     android:background="@null"
                     android:fontFamily="roboto"
+                    android:inputType="none"
                     android:text="Add Name"
-                    android:inputType="text"
                     android:textAlignment="center"
                     android:textColor="@color/blue"
                     android:textSize="14dp" />
@@ -92,6 +93,7 @@
                 </ImageView>
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/dob"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
@@ -126,6 +128,7 @@
 
                 <EditText
                     android:id="@+id/height"
+                    android:enabled="false"
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="20dp"
@@ -139,12 +142,13 @@
                     />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/weight"
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
-                    android:inputType="text"
+                    android:inputType="none"
                     android:hint="Weight in kg"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
@@ -169,13 +173,14 @@
                 </ImageView>
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/notesText"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="20dp"
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
-                    android:inputType="text"
+                    android:inputType="none"
                     android:hint="Enter relevant notes e.g. medical history"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
@@ -201,31 +206,20 @@
                 </ImageView>
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/allergy_entry"
-                    android:layout_width="150dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:text="Add allergens"
                     android:layout_marginHorizontal="20dp"
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
-                    android:inputType="text"
+                    android:inputType="none"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
                     android:background="@null"
                     />
 
-                <Button
-                    android:id="@+id/add_allergy"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/blue"
-                    android:src="@drawable/food"
-                    android:text="add"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    />
 
             </LinearLayout>
             <LinearLayout
@@ -241,7 +235,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/blue"
                     android:src="@drawable/food"
-                    android:text="@string/save_button"
+                    android:text="Edit"
                     android:textColor="@color/white"
                     android:layout_gravity="bottom"
                     />

@@ -1,5 +1,3 @@
-
-
 package com.example.allergyalert.ui.checkproduct
 
 import android.content.Intent
@@ -35,6 +33,8 @@ class SearchProduct : AppCompatActivity(), ProductAdapter.OnProductItemClickList
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_product)
 
+        list = ArrayList()
+
         ref = FirebaseDatabase.getInstance().reference.child("products")
         recyclerView = findViewById(R.id.products_search_view)
         searchView = findViewById(R.id.search_product_bar)
@@ -53,7 +53,7 @@ class SearchProduct : AppCompatActivity(), ProductAdapter.OnProductItemClickList
             ref.addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        list = ArrayList()
+
                         for (ds: DataSnapshot in snapshot.children) {
                             ds.getValue(Product::class.java)?.let { list.add(it) }
                             println(list.size)
@@ -97,6 +97,8 @@ class SearchProduct : AppCompatActivity(), ProductAdapter.OnProductItemClickList
     }
 
     override fun onItemClick(item: Product, position: Int) {
+        //println(item.prodIngredients)
+        //println(item.id)
         val intent = Intent(this, ProductInformation::class.java).putExtra("product", item.productName).putExtra("ingredients", item.prodIngredients)
         this.startActivity(intent)
     }

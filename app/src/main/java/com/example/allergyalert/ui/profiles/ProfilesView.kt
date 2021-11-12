@@ -7,14 +7,16 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.allergyalert.MainActivity
 import com.example.allergyalert.R
+import com.example.allergyalert.ui.checkproduct.ProductInformation
 
 
 class ProfilesView : AppCompatActivity() {
 
     lateinit var cancelButton: Button
-    lateinit var saveButton: Button
-    lateinit var profile_data: ArrayList<String>
+    lateinit var editButton: Button
+    lateinit var profile_data: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,11 +54,14 @@ class ProfilesView : AppCompatActivity() {
                 data.setText(profile_data[i].toString())
             }
 
-            saveButton = findViewById(R.id.save_profile)
+            editButton = findViewById(R.id.save_profile)
             cancelButton = findViewById(R.id.cancel_profile)
 
-            saveButton.setOnClickListener {
-                finish()
+            editButton.setOnClickListener {
+                val intent = Intent(this, AddProfile::class.java)
+                    .putExtra("profile data", profile_data)
+
+                this.startActivity(intent)
             }
 
             cancelButton.setOnClickListener {

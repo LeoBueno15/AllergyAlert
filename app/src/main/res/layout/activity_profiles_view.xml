@@ -128,10 +128,10 @@
                 <EditText
                     android:id="@+id/height"
                     android:enabled="false"
-                    android:layout_width="80dp"
+                    android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="20dp"
-                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:textAlignment="center"
                     android:fontFamily="roboto"
                     android:inputType="none"
                     android:hint="Height in cm"
@@ -141,14 +141,44 @@
                     />
 
                 <EditText
+                    android:id="@+id/cm"
                     android:enabled="false"
-                    android:id="@+id/weight"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
                     android:inputType="none"
+                    android:hint="cm"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:background="@null"
+                    />
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/weight"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:fontFamily="roboto"
+                    android:inputType="none"
                     android:hint="Weight in kg"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:background="@null"
+                    />
+
+                <EditText
+                    android:id="@+id/kg"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="textStart"
+                    android:fontFamily="roboto"
+                    android:inputType="none"
+                    android:hint="kg"
                     android:textColor="@color/blue"
                     android:textSize="14dp"
                     android:background="@null"
@@ -240,6 +270,18 @@
                     />
 
                 <Button
+                    android:id="@+id/delete_profile"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1.0"
+                    android:backgroundTint="@color/red"
+                    android:text="delete"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"/>
+
+                <Button
                     android:id="@+id/cancel_profile"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="70dp"
@@ -252,6 +294,7 @@
                     android:layout_gravity="bottom"/>
 
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -33,6 +33,7 @@ class ProfilesView : AppCompatActivity() {
             }
             else if (i == 1){
                 val data: TextView = findViewById(R.id.dob) as TextView
+                println(profile_data[i])
                 data.setText(profile_data[i].toString())
             }
             else if (i == 2){

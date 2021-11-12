@@ -92,9 +92,11 @@ class HomeFragment : Fragment() {
             val itemName = firebaseAdapter.getItem(position)
             val intent = Intent(activity, ProfilesView::class.java)
             profile_data = Array(7) {"default"}
+            println(profile_data[1])
 
             profile_data[0] = itemName.name
             profile_data[1] = itemName.DOB
+
             profile_data[2] = itemName.height
             profile_data[3] = itemName.weight
             profile_data[4] = itemName.notes

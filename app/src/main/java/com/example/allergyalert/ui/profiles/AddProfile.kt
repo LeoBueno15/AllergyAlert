@@ -52,10 +52,10 @@ class AddProfile : AppCompatActivity() {
                     profileDOB.setText(profile_data[i].toString())
                 }
                 else if (i == 2){
-                    profileWeight.setText(profile_data[i].toString() + "cm")
+                    profileWeight.setText(profile_data[i].toString())
                 }
                 else if (i == 3){
-                    profileHeight.setText(profile_data[i].toString() + "kg")
+                    profileHeight.setText(profile_data[i].toString())
                 }
                 else if (i == 4){
                     profileNotes.setText(profile_data[i].toString())

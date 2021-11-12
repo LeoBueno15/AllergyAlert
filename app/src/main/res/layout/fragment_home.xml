@@ -6,29 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.profiles.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:id="@+id/profile_view_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/profile_view_header_text"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/profile_view_header">
+        android:layout_margin="10dp"
+        tools:ignore="MissingConstraints">
 
         <ListView
             android:id="@+id/profiles_list_view"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="FontTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:fontFamily">serif</item>
-        <item name="android:textColor">@color/blue</item>
+    <style name="GeneralTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+
     </style>
 </resources>

@@ -32,10 +32,12 @@
             android:exported="true" />
         <activity
             android:name=".ui.profiles.AddProfile"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.AllergyAlert"/>
         <activity
             android:name=".ui.profiles.ProfilesView"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.AllergyAlert"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

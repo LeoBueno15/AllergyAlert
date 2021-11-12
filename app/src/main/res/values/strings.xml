@@ -25,10 +25,10 @@
     <string name="scan_product_now">Scan Product</string>
 
     <string name="product_information_header_text">Product Information</string>
-    <string name="product_name_title">Product:</string>
-    <string name="alert_title">Alert:</string>
-    <string name="ingredients_title">Ingredients:</string>
-    <string name="allergens_detected_title_text">Allergens Detected:</string>
+    <string name="product_name_title">Product:  </string>
+    <string name="alert_title">Alert:  </string>
+    <string name="ingredients_title">Ingredients:  </string>
+    <string name="allergens_detected_title_text">Allergens Detected:  </string>
     <string name="scan_new_button">Scan New Product</string>
     <string name="search_new_button">Search New Product</string>
 

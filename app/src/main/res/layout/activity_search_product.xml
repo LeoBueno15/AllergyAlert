@@ -40,6 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/home_button"
+        android:backgroundTint="@color/blue"
         android:layout_margin="10dp"
         android:layout_weight="0"/>
 

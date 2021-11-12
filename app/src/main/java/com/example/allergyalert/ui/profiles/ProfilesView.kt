@@ -54,7 +54,7 @@ class ProfilesView : AppCompatActivity() {
                 data.setText(profile_data[i].toString())
             }
 
-            editButton = findViewById(R.id.save_profile)
+            editButton = findViewById(R.id.edit_profile)
             cancelButton = findViewById(R.id.cancel_profile)
 
             editButton.setOnClickListener {

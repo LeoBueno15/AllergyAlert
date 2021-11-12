@@ -11,7 +11,7 @@
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/drawable/background_5.xml" value="0.1" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.275" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.275" />
-        <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/activity_add_profile.xml" value="0.125" />
+        <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/activity_add_profile.xml" value="0.25" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/activity_product_information.xml" value="0.25" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/activity_profiles_view.xml" value="0.22735507246376813" />
@@ -19,7 +19,7 @@
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/activity_search_product.xml" value="0.25" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/app_bar_main.xml" value="0.14175724637681159" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/content_main.xml" value="0.14175724637681159" />
-        <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/fragment_check_product.xml" value="0.1" />
+        <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/fragment_check_product.xml" value="0.25" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/fragment_home.xml" value="0.14175724637681159" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/nav_header_main.xml" value="0.14175724637681159" />
         <entry key="..\:/Users/Hamza/AndroidStudioProjects/AllergyAlert/app/src/main/res/layout/product_list_layout.xml" value="0.245018115942029" />

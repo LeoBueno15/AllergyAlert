@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:backgroundTint="@color/blue"
+    style="@style/GeneralTheme"
     >
 
     <ScrollView
-        style="@style/FontTheme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -110,7 +110,7 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/FontTheme"
+                style="@style/GeneralTheme"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:orientation="horizontal"
@@ -228,7 +228,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/save_profile"
+                    android:id="@+id/edit_profile"
                     android:layout_width="70dp"
                     android:layout_height="50dp"
                     android:layout_marginHorizontal="10dp"

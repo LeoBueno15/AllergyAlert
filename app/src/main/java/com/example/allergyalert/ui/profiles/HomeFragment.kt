@@ -9,9 +9,15 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.allergyalert.Profile
 import com.example.allergyalert.R
 import com.example.allergyalert.databinding.FragmentHomeBinding
+import com.firebase.ui.database.FirebaseListAdapter
+import com.firebase.ui.database.FirebaseListOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.FirebaseOptions
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class HomeFragment : Fragment() {
@@ -20,6 +26,8 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     lateinit var profileList: ListView
     lateinit var addProfileButton: FloatingActionButton
+    lateinit var firebaseAdapter: FirebaseListAdapter<Profile>
+    lateinit var ref: DatabaseReference
 
 
     // This property is only valid between onCreateView and
@@ -45,22 +53,37 @@ class HomeFragment : Fragment() {
             textView.text = it
         })*/
 
+        val query = FirebaseDatabase.getInstance().reference.child("profiles")
+
+        val firebaseOptions = FirebaseListOptions.Builder<Profile>()
+            .setLayout(R.layout.profiles_row)
+            .setQuery(query, Profile::class.java)
+            .build()
+
+        val adapter = object: FirebaseListAdapter<Profile>(firebaseOptions) {
+            override fun populateView(v: View?, model: Profile?, position: Int) {
+                val profileNameText = v?.findViewById<TextView>(R.id.row_text)
+                profileNameText!!.text = model!!.name
+            }
+        }
+
         profileList = binding.profilesListView
-        val profileArray: ArrayList<String> = ArrayList()
-        profileArray.add("Profile 1")
-        profileArray.add("Profile 2")
-        profileArray.add("Profile 3")
-        profileArray.add("Profile 4")
-        profileArray.add("Profile 5")
+//        val profileArray: ArrayList<String> = ArrayList()
+//        profileArray.add("Profile 1")
+//        profileArray.add("Profile 2")
+//        profileArray.add("Profile 3")
+//        profileArray.add("Profile 4")
+//        profileArray.add("Profile 5")
+//
+//        val arrayAdapter: ArrayAdapter<String>? = context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, profileArray) }
+//        profileList.adapter = arrayAdapter
 
-        val arrayAdapter: ArrayAdapter<String>? = context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, profileArray) }
-        profileList.adapter = arrayAdapter
-
+        profileList.adapter = adapter
         profileList.setOnItemClickListener { parent, view, position, id ->
-            var itemName = arrayAdapter?.getItem(position) // The item that was clicked
+//            var itemName = arrayAdapter?.getItem(position) // The item that was clicked
+            var itemName = adapter.getItem(position)
             val intent = Intent(activity, ProfilesView::class.java)
-            println(itemName)
-            intent.putExtra("name", itemName);
+            intent.putExtra("name", itemName.name);
             activity?.startActivity(intent)
         }
 

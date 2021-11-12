@@ -5,10 +5,10 @@ import java.util.*
 class Profile (
     val id: String,
     val name: String,
-    val DOB: Calendar,
-    val weight: Float,
-    val height: Float,
+    val DOB: String,
+    val weight: String,
+    val height: String,
     val notes: String,
-    val allergens: ArrayList<String>,
-    val productAllergens: ArrayList<String>
+    val allergens: String,
+    val productAllergens: String
     )

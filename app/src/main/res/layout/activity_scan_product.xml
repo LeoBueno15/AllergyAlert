@@ -1,24 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:id="@+id/scan_product_layout"
-    tools:context=".ui.checkproduct.ScanProduct">
+    android:orientation="vertical"
+    android:backgroundTint="@color/blue"
+    android:fontFamily="roboto"
+    >
 
-    <TextView
-        android:id="@+id/scan_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/scan_product_title"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="vertical"
+        android:background="@color/blue"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile"></ImageView>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/scan_title"
+            android:fontFamily="serif"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:text="@string/scan_product_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/scan_text"
@@ -30,23 +70,32 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/scan_product_text"
-        app:layout_constraintTop_toBottomOf="@+id/scan_title"/>
+        app:layout_constraintTop_toBottomOf="parent"/>
 
-
-    <Button
-        android:id="@+id/scan_button"
+    <LinearLayout
+        android:id="@+id/ingredients_layout"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="@string/scan_product_now"
-        app:layout_constraintTop_toBottomOf="@+id/scan_text" />
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
-    <Button
-        android:id="@+id/home_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_button"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/scan_button" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/scan_product_now"
+            android:backgroundTint="@color/blue"
+            />
+
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_button"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/blue"
+            />
+    </LinearLayout>
+</LinearLayout>

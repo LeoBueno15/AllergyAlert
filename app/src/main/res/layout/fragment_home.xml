@@ -49,6 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:contentDescription="@string/add_prof_allergen"
         app:srcCompat="@android:drawable/ic_input_add"
-        android:tint="@android:color/white"/>
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

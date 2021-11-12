@@ -110,7 +110,6 @@
         </LinearLayout>
 
             <LinearLayout
-                style="@style/GeneralTheme"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:orientation="horizontal"
@@ -128,27 +127,57 @@
 
                 <EditText
                     android:id="@+id/height"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="20dp"
-                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:textAlignment="center"
                     android:fontFamily="roboto"
                     android:inputType="text"
-                    android:hint="Height in cm"
+                    android:hint="Height in "
                     android:textColor="@color/light_coal"
                     android:textSize="14dp"
                     android:background="@null"
                     />
 
                 <EditText
-                    android:id="@+id/weight"
-                    android:layout_width="80dp"
+                    android:id="@+id/cm"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
                     android:textAlignment="textStart"
                     android:fontFamily="roboto"
+                    android:inputType="none"
+                    android:hint="cm"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:background="@null"
+                    />
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:fontFamily="roboto"
                     android:inputType="text"
-                    android:hint="Weight in kg"
+                    android:hint="Weight in "
                     android:textColor="@color/light_coal"
+                    android:textSize="14dp"
+                    android:background="@null"
+                    />
+
+                <EditText
+                    android:id="@+id/kg"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="textStart"
+                    android:fontFamily="roboto"
+                    android:inputType="none"
+                    android:hint="kg"
+                    android:textColor="@color/blue"
                     android:textSize="14dp"
                     android:background="@null"
                     />

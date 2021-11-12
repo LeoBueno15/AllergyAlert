@@ -16,6 +16,7 @@ class ProfilesView : AppCompatActivity() {
 
     lateinit var cancelButton: Button
     lateinit var editButton: Button
+    lateinit var deleteButton: Button
     lateinit var profile_data: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,17 +34,16 @@ class ProfilesView : AppCompatActivity() {
             else if (i == 1){
 //                print("profile dob ${profile_data[i]}")
                 val data: TextView = findViewById(R.id.dob) as TextView
-                println(profile_data[i])
                 data.setText(profile_data[i].toString())
             }
             else if (i == 2){
                 print("profile height ${profile_data[i]}")
                 val data: TextView = findViewById(R.id.height) as TextView
-                data.setText(profile_data[i].toString() + "cm")
+                data.setText(profile_data[i].toString())
             }
             else if (i == 3){
                 val data: TextView = findViewById(R.id.weight) as TextView
-                data.setText(profile_data[i].toString() + "kg")
+                data.setText(profile_data[i].toString())
             }
             else if (i == 4){
                 val data: TextView = findViewById(R.id.notesText) as TextView
@@ -56,12 +56,17 @@ class ProfilesView : AppCompatActivity() {
 
             editButton = findViewById(R.id.edit_profile)
             cancelButton = findViewById(R.id.cancel_profile)
+            deleteButton = findViewById(R.id.delete_profile)
 
             editButton.setOnClickListener {
                 val intent = Intent(this, AddProfile::class.java)
                     .putExtra("profile data", profile_data)
 
                 this.startActivity(intent)
+            }
+
+            deleteButton.setOnClickListener {
+                finish()
             }
 
             cancelButton.setOnClickListener {

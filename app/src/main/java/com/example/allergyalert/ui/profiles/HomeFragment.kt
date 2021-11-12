@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -55,17 +55,24 @@ class HomeFragment : Fragment() {
 
         val query = FirebaseDatabase.getInstance().reference.child("profiles")
 
+        println("query ${query.database}")
+
         val firebaseOptions = FirebaseListOptions.Builder<Profile>()
             .setLayout(R.layout.profiles_row)
             .setQuery(query, Profile::class.java)
+            .setLifecycleOwner(this)
             .build()
 
-        val adapter = object: FirebaseListAdapter<Profile>(firebaseOptions) {
+        println("fboptions$firebaseOptions")
+
+        firebaseAdapter = object: FirebaseListAdapter<Profile>(firebaseOptions) {
             override fun populateView(v: View?, model: Profile?, position: Int) {
                 val profileNameText = v?.findViewById<TextView>(R.id.row_text)
+                println("profileNameText $profileNameText")
                 profileNameText!!.text = model!!.name
             }
         }
+
 
         profileList = binding.profilesListView
 //        val profileArray: ArrayList<String> = ArrayList()
@@ -78,10 +85,10 @@ class HomeFragment : Fragment() {
 //        val arrayAdapter: ArrayAdapter<String>? = context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, profileArray) }
 //        profileList.adapter = arrayAdapter
 
-        profileList.adapter = adapter
+        profileList.adapter = firebaseAdapter
         profileList.setOnItemClickListener { parent, view, position, id ->
 //            var itemName = arrayAdapter?.getItem(position) // The item that was clicked
-            var itemName = adapter.getItem(position)
+            val itemName = firebaseAdapter.getItem(position)
             val intent = Intent(activity, ProfilesView::class.java)
             intent.putExtra("name", itemName.name);
             activity?.startActivity(intent)
@@ -99,5 +106,11 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        firebaseAdapter.startListening()
     }
 }

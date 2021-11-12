@@ -56,7 +56,6 @@ class SearchProduct : AppCompatActivity(), ProductAdapter.OnProductItemClickList
 
                         for (ds: DataSnapshot in snapshot.children) {
                             ds.getValue(Product::class.java)?.let { list.add(it) }
-                            println(list.size)
                         }
                         val adapter: ProductAdapter = ProductAdapter(list, this@SearchProduct)
                         recyclerView.adapter = adapter
@@ -97,8 +96,6 @@ class SearchProduct : AppCompatActivity(), ProductAdapter.OnProductItemClickList
     }
 
     override fun onItemClick(item: Product, position: Int) {
-        //println(item.prodIngredients)
-        //println(item.id)
         val intent = Intent(this, ProductInformation::class.java).putExtra("product", item.productName).putExtra("ingredients", item.prodIngredients)
         this.startActivity(intent)
     }

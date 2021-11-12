@@ -31,13 +31,10 @@ class ProfilesView : AppCompatActivity() {
                 data.setText(profile_data[i].toString())
             }
             else if (i == 1){
-//                print("profile dob ${profile_data[i]}")
                 val data: TextView = findViewById(R.id.dob) as TextView
-                println(profile_data[i])
                 data.setText(profile_data[i].toString())
             }
             else if (i == 2){
-                print("profile height ${profile_data[i]}")
                 val data: TextView = findViewById(R.id.height) as TextView
                 data.setText(profile_data[i].toString() + "cm")
             }

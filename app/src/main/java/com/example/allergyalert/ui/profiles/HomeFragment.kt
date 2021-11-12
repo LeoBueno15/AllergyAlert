@@ -56,15 +56,11 @@ class HomeFragment : Fragment() {
 
         val query = FirebaseDatabase.getInstance().reference.child("profiles")
 
-        println("query ${query.database}")
-
         val firebaseOptions = FirebaseListOptions.Builder<Profile>()
             .setLayout(R.layout.profiles_row)
             .setQuery(query, Profile::class.java)
             .setLifecycleOwner(this)
             .build()
-
-        println("fboptions$firebaseOptions")
 
         firebaseAdapter = object: FirebaseListAdapter<Profile>(firebaseOptions) {
             override fun populateView(v: View?, model: Profile?, position: Int) {
@@ -91,7 +87,6 @@ class HomeFragment : Fragment() {
             val itemName = firebaseAdapter.getItem(position)
             val intent = Intent(activity, ProfilesView::class.java)
             profile_data = Array(7) {"default"}
-            println(profile_data[1])
 
             profile_data[0] = itemName.name
             profile_data[1] = itemName.dob

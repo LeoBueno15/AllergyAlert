@@ -69,7 +69,6 @@ class HomeFragment : Fragment() {
         firebaseAdapter = object: FirebaseListAdapter<Profile>(firebaseOptions) {
             override fun populateView(v: View?, model: Profile?, position: Int) {
                 val profileNameText = v?.findViewById<TextView>(R.id.row_text)
-                println("profileNameText $profileNameText")
                 profileNameText!!.text = model!!.name
             }
         }
@@ -95,15 +94,12 @@ class HomeFragment : Fragment() {
             println(profile_data[1])
 
             profile_data[0] = itemName.name
-            profile_data[1] = itemName.DOB
-
+            profile_data[1] = itemName.dob
             profile_data[2] = itemName.height
             profile_data[3] = itemName.weight
             profile_data[4] = itemName.notes
             profile_data[5] = itemName.allergens
             profile_data[6] = itemName.id
-
-
 
             intent.putExtra("profile data", profile_data);
             activity?.startActivity(intent)
@@ -118,13 +114,10 @@ class HomeFragment : Fragment() {
         return root
     }
 
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
     override fun onStart() {
         super.onStart()

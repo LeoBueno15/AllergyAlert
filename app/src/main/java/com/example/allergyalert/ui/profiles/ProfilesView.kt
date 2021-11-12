@@ -25,18 +25,19 @@ class ProfilesView : AppCompatActivity() {
 
         profile_data = intent.getStringArrayExtra("profile data")!!
 
-
         for (i in 0..5) {
             if (i == 0) {
                 val data: TextView = findViewById(R.id.name_entry) as TextView
                 data.setText(profile_data[i].toString())
             }
             else if (i == 1){
+//                print("profile dob ${profile_data[i]}")
                 val data: TextView = findViewById(R.id.dob) as TextView
                 println(profile_data[i])
                 data.setText(profile_data[i].toString())
             }
             else if (i == 2){
+                print("profile height ${profile_data[i]}")
                 val data: TextView = findViewById(R.id.height) as TextView
                 data.setText(profile_data[i].toString() + "cm")
             }

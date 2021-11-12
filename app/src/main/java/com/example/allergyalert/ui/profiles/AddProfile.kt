@@ -14,7 +14,6 @@ class AddProfile : AppCompatActivity() {
 
     lateinit var cancelButton: Button
     lateinit var saveButton: Button
-    lateinit var addButton: Button
     lateinit var profile_data: Array<String>
     lateinit var ref: DatabaseReference
     var hasProfileData: Boolean = false
@@ -32,8 +31,8 @@ class AddProfile : AppCompatActivity() {
         ref = FirebaseDatabase.getInstance().getReference("profiles")
         profileName = findViewById<TextView>(R.id.name_entry)
         profileDOB = findViewById<TextView>(R.id.dob)
-        profileWeight = findViewById<TextView>(R.id.height)
-        profileHeight = findViewById<TextView>(R.id.weight)
+        profileWeight = findViewById<TextView>(R.id.weight)
+        profileHeight = findViewById<TextView>(R.id.height)
         profileNotes = findViewById<TextView>(R.id.notesText)
         profileAllergens = findViewById<TextView>(R.id.allergy_entry)
 
@@ -78,7 +77,7 @@ class AddProfile : AppCompatActivity() {
                 val profileId = profile_data.last()
                 val profileIdRef = ref.child(profileId)
                 profileIdRef.child("name").setValue(profileName.text.toString())
-                profileIdRef.child("DOB").setValue(profileDOB.text.toString())
+                profileIdRef.child("dob").setValue(profileDOB.text.toString())
                 profileIdRef.child("weight").setValue(profileWeight.text.toString())
                 profileIdRef.child("height").setValue(profileHeight.text.toString())
                 profileIdRef.child("notes").setValue(profileNotes.text.toString())
@@ -86,12 +85,14 @@ class AddProfile : AppCompatActivity() {
             } else {
                 println("created profile")
                 val profileKey = ref.push().key
+                println("profile height ${profileHeight.text.toString()}")
+                println("profile weight ${profileWeight.text.toString()}")
                 val profile = Profile(
                     profileKey!!,
                     profileName.text.toString(),
                     profileDOB.text.toString(),
-                    profileWeight.text.toString(),
                     profileHeight.text.toString(),
+                    profileWeight.text.toString(),
                     profileNotes.text.toString(),
                     profileAllergens.text.toString(),
                     ""

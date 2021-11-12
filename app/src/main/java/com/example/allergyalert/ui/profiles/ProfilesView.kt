@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.allergyalert.MainActivity
 import com.example.allergyalert.R
 import com.example.allergyalert.ui.checkproduct.ProductInformation
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class ProfilesView : AppCompatActivity() {
@@ -18,13 +20,14 @@ class ProfilesView : AppCompatActivity() {
     lateinit var editButton: Button
     lateinit var deleteButton: Button
     lateinit var profile_data: Array<String>
+    lateinit var ref: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profiles_view)
 
-
         profile_data = intent.getStringArrayExtra("profile data")!!
+
 
         for (i in 0..5) {
             if (i == 0) {
@@ -66,6 +69,8 @@ class ProfilesView : AppCompatActivity() {
             }
 
             deleteButton.setOnClickListener {
+                ref = FirebaseDatabase.getInstance().reference.child("profiles")
+                ref.child(profile_data[6]).removeValue()
                 finish()
             }
 

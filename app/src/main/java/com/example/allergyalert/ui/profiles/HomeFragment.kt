@@ -28,6 +28,7 @@ class HomeFragment : Fragment() {
     lateinit var addProfileButton: FloatingActionButton
     lateinit var firebaseAdapter: FirebaseListAdapter<Profile>
     lateinit var ref: DatabaseReference
+    lateinit var profile_data: Array<String>
 
 
     // This property is only valid between onCreateView and
@@ -75,6 +76,7 @@ class HomeFragment : Fragment() {
 
 
         profileList = binding.profilesListView
+
 //        val profileArray: ArrayList<String> = ArrayList()
 //        profileArray.add("Profile 1")
 //        profileArray.add("Profile 2")
@@ -90,7 +92,19 @@ class HomeFragment : Fragment() {
 //            var itemName = arrayAdapter?.getItem(position) // The item that was clicked
             val itemName = firebaseAdapter.getItem(position)
             val intent = Intent(activity, ProfilesView::class.java)
-            intent.putExtra("name", itemName.name);
+            profile_data = Array(7) {"default"}
+
+            profile_data[0] = itemName.name
+            profile_data[1] = itemName.DOB
+            profile_data[2] = itemName.height
+            profile_data[3] = itemName.weight
+            profile_data[4] = itemName.notes
+            profile_data[5] = itemName.allergens
+            profile_data[6] = itemName.id
+
+
+
+            intent.putExtra("profile data", profile_data);
             activity?.startActivity(intent)
         }
 
@@ -102,6 +116,8 @@ class HomeFragment : Fragment() {
 
         return root
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

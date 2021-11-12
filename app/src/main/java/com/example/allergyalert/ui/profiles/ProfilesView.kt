@@ -22,15 +22,13 @@ class ProfilesView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profiles_view)
 
-        val ss: String = intent.getStringExtra("name").toString()
-        val res: Resources = resources
-        val profile_data = res.getStringArray(R.array.test_profile)
+
+        profile_data = intent.getStringArrayExtra("profile data")!!
 
 
         for (i in 0..5) {
             if (i == 0) {
                 val data: TextView = findViewById(R.id.name_entry) as TextView
-                println("name is " + profile_data[i].toString())
                 data.setText(profile_data[i].toString())
             }
             else if (i == 1){

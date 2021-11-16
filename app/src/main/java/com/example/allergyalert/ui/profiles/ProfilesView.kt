@@ -15,6 +15,8 @@ import androidx.core.content.ContextCompat
 import com.example.allergyalert.MainActivity
 import com.example.allergyalert.R
 import com.example.allergyalert.ui.checkproduct.ProductInformation
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -26,13 +28,13 @@ class ProfilesView : AppCompatActivity() {
     lateinit var deleteButton: Button
     lateinit var profile_data: Array<String>
     lateinit var ref: DatabaseReference
+    lateinit var firebaeUser: FirebaseUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profiles_view)
 
         profile_data = intent.getStringArrayExtra("profile data")!!
-
 
         for (i in 0..5) {
             if (i == 0) {
@@ -76,15 +78,17 @@ class ProfilesView : AppCompatActivity() {
 
                 dialogBuilder.setMessage("Are you sure?")
                     .setTitle("DELETE PROFILE")
-                    .setNegativeButton("Delete", DialogInterface.OnClickListener {
-                            dialog, id ->
-                        ref = FirebaseDatabase.getInstance().reference.child("profiles")
+                    .setNegativeButton("Delete", DialogInterface.OnClickListener { dialog, id ->
+                        firebaeUser = FirebaseAuth.getInstance().currentUser!!
+                        val userId = firebaeUser.uid
+                        ref =
+                            FirebaseDatabase.getInstance().reference.child(userId).child("profiles")
                         ref.child(profile_data[6]).removeValue()
                         finish()
                     })
 
-                    .setPositiveButton("Cancel", DialogInterface.OnClickListener {
-                            dialog, id -> dialog.cancel()
+                    .setPositiveButton("Cancel", DialogInterface.OnClickListener { dialog, id ->
+                        dialog.cancel()
                     })
 
                 val alert = dialogBuilder.create()
@@ -95,9 +99,15 @@ class ProfilesView : AppCompatActivity() {
                 messageView!!.setTextColor(ContextCompat.getColor(this, R.color.blue))
 
                 val titleView = alert.findViewById<TextView>(android.R.id.title)
-                titleView!!.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
-                titleView!!.setTextColor(ContextCompat.getColor(this, R.color.white))
+                if (titleView != null) {
+                    titleView.setTextColor(ContextCompat.getColor(this, R.color.white))
+                }
+                if (titleView != null) {
+                    titleView.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+                }
 
+//                titleView!!.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+//                titleView!!.setTextColor(ContextCompat.getColor(this, R.color.white))
             }
 
             cancelButton.setOnClickListener {

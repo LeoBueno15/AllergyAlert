@@ -6,13 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".ui.profiles.HomeFragment">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-    <LinearLayout
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile"></ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/profile_view_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:text="Profiles"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/profile_view_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Click on the + button to add a profile, or click on a profile to view or edit/delete its information."
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/profile_view_title" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/profile_view_desc"
+        tools:layout_editor_absoluteX="10dp">
 
         <ListView
             android:id="@+id/profiles_list_view"

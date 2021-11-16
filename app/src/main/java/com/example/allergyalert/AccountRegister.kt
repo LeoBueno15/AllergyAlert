@@ -35,11 +35,11 @@ class AccountRegister : AppCompatActivity() {
         registerButton.setOnClickListener {
             when {
                 TextUtils.isEmpty(emailEditText.text.toString().trim { it <= ' '}) -> {
-                    Toast.makeText(this, "Please enter email", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show()
                 }
 
                 TextUtils.isEmpty(passwordEditText.text.toString().trim { it <= ' '}) -> {
-                    Toast.makeText(this, "Please enter password", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     val email = emailEditText.text.toString().trim { it <= ' '}
@@ -50,7 +50,7 @@ class AccountRegister : AppCompatActivity() {
                             OnCompleteListener<AuthResult> { task ->
                                 if (task.isSuccessful) {
                                     val firebaseUser: FirebaseUser? = task.result?.user
-                                    Toast.makeText(this, "Registered successfully!", Toast.LENGTH_LONG).show()
+                                    Toast.makeText(this, "Registered successfully!", Toast.LENGTH_SHORT).show()
 
                                     val intent = Intent(this, MainActivity::class.java)
                                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -61,7 +61,7 @@ class AccountRegister : AppCompatActivity() {
                                     startActivity(intent)
                                     finish()
                                 } else {
-                                    Toast.makeText(this, task.exception?.message.toString(), Toast.LENGTH_LONG).show()
+                                    Toast.makeText(this, task.exception?.message.toString(), Toast.LENGTH_SHORT).show()
                                 }
                             }
                         )

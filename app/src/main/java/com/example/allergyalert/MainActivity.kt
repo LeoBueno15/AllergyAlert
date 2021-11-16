@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         animationBackground.setEnterFadeDuration(4000)
         animationBackground.setExitFadeDuration(4000)
         animationBackground.start()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

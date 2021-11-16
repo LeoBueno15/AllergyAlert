@@ -22,10 +22,9 @@ class ScanProduct : AppCompatActivity() {
     lateinit var scanButton: Button
     lateinit var homeButton: Button
     private val client = OkHttpClient()
-    lateinit var parsed_name: String
-    lateinit var parsed_ing: String
+    var parsed_name: String = ""
+    var parsed_ing: String = ""
     var check = 0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,14 +58,23 @@ class ScanProduct : AppCompatActivity() {
                     retrieveWebInfo(url)
 
                     while (check < 1) {
+                        println("check" + check)
                         //do nothing, wait for retrieveWebInfo(url) to finish running
                     }
-                        val intent = Intent(this, ProductInformation::class.java)
 
+                    println("intent starting")
+                    val intent = Intent(this, ProductInformation::class.java)
+
+                    if (parsed_name == "" || parsed_ing == "") {
+                        intent.putExtra("name", "no name")
+                        intent.putExtra("ingredients", "no ingredients")
+                    } else {
                         intent.putExtra("name", parsed_name)
                         intent.putExtra("ingredients", parsed_ing)
-                        this.startActivity(intent)
-
+                    }
+//                    check = 0
+                    this.startActivity(intent)
+                    finish()
                 }
             } else {
                 super. onActivityResult(requestCode, resultCode, data)
@@ -94,17 +102,19 @@ class ScanProduct : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 val product_info = response.body()?.string()
                 val product_properties = product_info?.split("description")
-                parsed_name =  product_properties!![1].split('"')[2]
-
-                val ing_group = product_info.split("ingredients")
-                parsed_ing =  ing_group[1].split('"')[2]
+//                println("prod proper size" + product_properties?.size)
+//                println("prod proper" + product_properties)
+                if (product_properties?.size!! >= 2) {
+                    parsed_name =  product_properties[1].split('"')[2]
+//                    println("parsed name" + parsed_name)
+                    val ing_group = product_info.split("ingredients")
+//                    println("ing_group" + ing_group)
+                    parsed_ing =  ing_group[1].split('"')[2]
+//                    println("parsed ing" + parsed_ing)
+                }
                 check ++
-
+//                println("check" + check)
             }
         })
-
     }
-
-
-
 }

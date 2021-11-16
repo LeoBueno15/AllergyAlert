@@ -18,6 +18,7 @@ import com.firebase.ui.database.FirebaseListOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -32,7 +33,8 @@ class HomeFragment : Fragment() {
     lateinit var ref: DatabaseReference
     lateinit var profile_data: Array<String>
     lateinit var logoutButton: Button
-
+    lateinit var firebaeUser: FirebaseUser
+    lateinit var logOutButton: ImageButton
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -57,7 +59,9 @@ class HomeFragment : Fragment() {
             textView.text = it
         })*/
 
-        val query = FirebaseDatabase.getInstance().reference.child("profiles")
+        firebaeUser = FirebaseAuth.getInstance().currentUser!!
+        val userId = firebaeUser.uid
+        val query = FirebaseDatabase.getInstance().reference.child(userId).child("profiles")
 
         val firebaseOptions = FirebaseListOptions.Builder<Profile>()
             .setLayout(R.layout.profiles_row)

@@ -96,7 +96,7 @@ class SearchProduct : AppCompatActivity(), ProductAdapter.OnProductItemClickList
     }
 
     override fun onItemClick(item: Product, position: Int) {
-        val intent = Intent(this, ProductInformation::class.java).putExtra("product", item.productName).putExtra("ingredients", item.prodIngredients)
+        val intent = Intent(this, ProductInformation::class.java).putExtra("name", item.productName).putExtra("ingredients", item.prodIngredients)
         this.startActivity(intent)
     }
 }

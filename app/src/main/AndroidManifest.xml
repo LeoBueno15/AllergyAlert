@@ -4,6 +4,7 @@
     package="com.example.allergyalert">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28"
         tools:ignore="ScopedStorage" />
@@ -37,7 +38,7 @@
         <activity
             android:name=".ui.profiles.ProfilesView"
             android:exported="true"
-            android:theme="@style/Theme.AllergyAlert"/>
+            android:theme="@style/Theme.AllergyAlert" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

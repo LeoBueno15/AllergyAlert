@@ -27,12 +27,16 @@ class ProductInformation : AppCompatActivity() {
     lateinit var alertText: TextView
     lateinit var ingredientsText: TextView
     lateinit var allergensDetectedText: TextView
-    var alertString: String = "al"
-    var detectedString: String = "de"
+    var alertString: String = ""
+    var detectedString: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_information)
+
+        if (intent.getStringExtra("name") != null){
+
+        }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setHomeButtonEnabled(true)
@@ -46,7 +50,7 @@ class ProductInformation : AppCompatActivity() {
         ingredientsText.isSelected = true
         allergensDetectedText = findViewById(R.id.allergens_detected_listview)
 
-        val productName = intent.getStringExtra("product").toString()
+        val productName = intent.getStringExtra("name").toString()
         val ingredients = intent.getStringExtra("ingredients").toString().trim()
         val alertList = ArrayList<String>()
         val allergensDetectedList = ArrayList<String>()

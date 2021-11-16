@@ -1,12 +1,17 @@
 package com.example.allergyalert.ui.profiles
 
+import android.content.DialogInterface
 import android.content.Intent.getIntent
 import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.allergyalert.MainActivity
 import com.example.allergyalert.R
 import com.example.allergyalert.ui.checkproduct.ProductInformation
@@ -67,9 +72,32 @@ class ProfilesView : AppCompatActivity() {
             }
 
             deleteButton.setOnClickListener {
-                ref = FirebaseDatabase.getInstance().reference.child("profiles")
-                ref.child(profile_data[6]).removeValue()
-                finish()
+                val dialogBuilder = AlertDialog.Builder(this)
+
+                dialogBuilder.setMessage("Are you sure?")
+                    .setTitle("DELETE PROFILE")
+                    .setNegativeButton("Delete", DialogInterface.OnClickListener {
+                            dialog, id ->
+                        ref = FirebaseDatabase.getInstance().reference.child("profiles")
+                        ref.child(profile_data[6]).removeValue()
+                        finish()
+                    })
+
+                    .setPositiveButton("Cancel", DialogInterface.OnClickListener {
+                            dialog, id -> dialog.cancel()
+                    })
+
+                val alert = dialogBuilder.create()
+                alert.show()
+
+                val messageView = alert.findViewById<TextView>(android.R.id.message)
+                messageView!!.gravity = Gravity.CENTER_VERTICAL
+                messageView!!.setTextColor(ContextCompat.getColor(this, R.color.blue))
+
+                val titleView = alert.findViewById<TextView>(android.R.id.title)
+                titleView!!.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+                titleView!!.setTextColor(ContextCompat.getColor(this, R.color.white))
+
             }
 
             cancelButton.setOnClickListener {
@@ -78,5 +106,5 @@ class ProfilesView : AppCompatActivity() {
 
         }
 
-    }
-}
+    }}
+

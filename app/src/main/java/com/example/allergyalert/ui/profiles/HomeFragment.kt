@@ -1,5 +1,7 @@
 package com.example.allergyalert.ui.profiles
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -105,12 +107,34 @@ class HomeFragment : Fragment() {
         }
 
         logoutButton.setOnClickListener {
+            val dialog: AlertDialog
+            val builder = AlertDialog.Builder(activity)
+
+            builder.setTitle("Logout")
+            builder.setMessage("Are you sure you want to logout?")
+
+            val dialogClickListener = DialogInterface.OnClickListener{ _, which ->
+                when(which){
+                    DialogInterface.BUTTON_POSITIVE -> dialogFun(1)
+                    DialogInterface.BUTTON_NEGATIVE -> dialogFun(0)
+                }
+            }
+
+            builder.setPositiveButton("YES",dialogClickListener)
+            builder.setNegativeButton("NO",dialogClickListener)
+            dialog = builder.create()
+            dialog.show()
+        }
+
+        return root
+    }
+
+    fun dialogFun(operation: Int) {
+        if (operation == 1) {
             FirebaseAuth.getInstance().signOut()
             startActivity(Intent(activity, AccountSignIn::class.java))
             activity?.onBackPressed()
         }
-
-        return root
     }
 
     override fun onDestroyView() {

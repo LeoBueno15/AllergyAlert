@@ -1,10 +1,12 @@
 package com.example.allergyalert
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.renderscript.ScriptGroup
 import android.view.Menu
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -17,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.example.allergyalert.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import java.io.File
@@ -28,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    lateinit var signOut: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,24 +58,6 @@ class MainActivity : AppCompatActivity() {
         animationBackground.setEnterFadeDuration(4000)
         animationBackground.setExitFadeDuration(4000)
         animationBackground.start()
-
-//        val inputProd: InputStream = this.resources.openRawResource(R.raw.products_text)
-//        val lineListProd = mutableListOf<String>()
-//        inputProd.bufferedReader().forEachLine { lineListProd.add(it) }
-//
-//        val inputIngred: InputStream = this.resources.openRawResource(R.raw.ingredients_text)
-//        val lineListIngred = mutableListOf<String>()
-//        inputIngred.bufferedReader().forEachLine { lineListIngred.add(it) }
-//
-//        val ref = FirebaseDatabase.getInstance().getReference("products")
-//
-//        for (i in 0 until 10000) {
-//            val prodName = lineListProd[i].toString().trim()
-//            val prodIngredients = lineListIngred[i].toString().trim()
-//            val prodId = ref.push().key
-//            val product = Product(prodId!!, prodName, prodIngredients)
-//            ref.child(prodId).setValue(product)
-//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

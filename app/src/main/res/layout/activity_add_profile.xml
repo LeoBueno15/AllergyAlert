@@ -54,12 +54,11 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
+                android:layout_gravity="center"
                 android:layout_marginHorizontal="80dp"
                 android:layout_marginTop="240dp"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/light_coal"
-                android:layout_gravity="center"
-                />
+                android:textColor="@color/light_coal" />
 
 
             <EditText

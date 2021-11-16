@@ -9,6 +9,7 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.allergyalert.AccountSignIn
 import com.example.allergyalert.Profile
 import com.example.allergyalert.R
 import com.example.allergyalert.databinding.FragmentHomeBinding
@@ -16,6 +17,7 @@ import com.firebase.ui.database.FirebaseListAdapter
 import com.firebase.ui.database.FirebaseListOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.FirebaseOptions
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -29,6 +31,7 @@ class HomeFragment : Fragment() {
     lateinit var firebaseAdapter: FirebaseListAdapter<Profile>
     lateinit var ref: DatabaseReference
     lateinit var profile_data: Array<String>
+    lateinit var logoutButton: Button
 
 
     // This property is only valid between onCreateView and
@@ -70,16 +73,7 @@ class HomeFragment : Fragment() {
         }
 
         profileList = binding.profilesListView
-
-//        val profileArray: ArrayList<String> = ArrayList()
-//        profileArray.add("Profile 1")
-//        profileArray.add("Profile 2")
-//        profileArray.add("Profile 3")
-//        profileArray.add("Profile 4")
-//        profileArray.add("Profile 5")
-//
-//        val arrayAdapter: ArrayAdapter<String>? = context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, profileArray) }
-//        profileList.adapter = arrayAdapter
+        logoutButton = binding.logoutButton
 
         profileList.adapter = firebaseAdapter
         profileList.setOnItemClickListener { parent, view, position, id ->
@@ -104,6 +98,12 @@ class HomeFragment : Fragment() {
         addProfileButton.setOnClickListener {
             val intent = Intent(activity, AddProfile::class.java)
             activity?.startActivity(intent)
+        }
+
+        logoutButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(activity, AccountSignIn::class.java))
+            activity?.onBackPressed()
         }
 
         return root

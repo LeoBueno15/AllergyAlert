@@ -7,8 +7,11 @@ import android.widget.*
 import com.example.allergyalert.MainActivity
 import com.example.allergyalert.Profile
 import com.example.allergyalert.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
 import kotlin.system.exitProcess
 
@@ -25,19 +28,21 @@ class AddProfile : AppCompatActivity() {
     lateinit var profileHeight: TextView
     lateinit var profileNotes: TextView
     lateinit var profileAllergens: TextView
+    lateinit var firebaeUser: FirebaseUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_profile)
 
-        ref = FirebaseDatabase.getInstance().getReference("profiles")
         profileName = findViewById<TextView>(R.id.name_entry)
         profileDOB = findViewById<TextView>(R.id.dob)
         profileWeight = findViewById<TextView>(R.id.weight)
         profileHeight = findViewById<TextView>(R.id.height)
         profileNotes = findViewById<TextView>(R.id.notesText)
         profileAllergens = findViewById<TextView>(R.id.allergy_entry)
-
+        firebaeUser = FirebaseAuth.getInstance().currentUser!!
+        val userId = firebaeUser.uid
+        ref = FirebaseDatabase.getInstance().reference.child(userId).child("profiles")
 
         if (intent.getStringArrayExtra("profile data") != null){
             hasProfileData = true

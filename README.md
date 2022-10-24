@@ -11,4 +11,6 @@ To use Allergy Alert, one creates an account through their email. Once created, 
 
 Website for more info: allergyalert299267498.wordpress.com
 
+Watch video of app: https://drive.google.com/file/d/1RRfT8h6EWYYHC2o97Bn4S9setRl7GzvK/view?usp=sharing
+
 [Download App](https://docs.google.com/uc?export=download&id=1l8NdEAg68W2KKiVfFvykQWgqFHlijYvY)
